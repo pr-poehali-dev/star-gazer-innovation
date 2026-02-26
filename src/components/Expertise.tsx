@@ -1,30 +1,30 @@
 import { useEffect, useRef, useState } from "react"
-import { Home, Building, Armchair, Trees } from "lucide-react"
+import { ShieldCheck, Truck, HeadphonesIcon, BadgePercent } from "lucide-react"
 import { HighlightedText } from "./HighlightedText"
 
 const expertiseAreas = [
   {
-    title: "Жилая архитектура",
-    description: "Создаем дома, которые сочетают красоту с комфортом, где каждое пространство служит и форме, и функции.",
-    icon: Home,
+    title: "Гарантия качества",
+    description: "Вся продукция сертифицирована по ГОСТ Р 51261 и другим актуальным стандартам доступной среды. Официальные гарантийные обязательства на каждый товар.",
+    icon: ShieldCheck,
   },
   {
-    title: "Коммерческие объекты",
+    title: "Доставка по всей России",
     description:
-      "Проектируем рабочие пространства, которые вдохновляют на продуктивность и отражают ценности передовых организаций.",
-    icon: Building,
+      "Работаем с транспортными компаниями по всей стране. Крупные партии — прямая доставка до объекта, малые заказы — курьером или постаматом.",
+    icon: Truck,
   },
   {
-    title: "Дизайн интерьеров",
+    title: "Консультация специалиста",
     description:
-      "Создаем интерьеры, которые гармонируют с архитектурной оболочкой, формируя целостный пространственный опыт.",
-    icon: Armchair,
+      "Помогаем подобрать оборудование под требования конкретного объекта, проверим соответствие нормативам и предоставим пакет документов.",
+    icon: HeadphonesIcon,
   },
   {
-    title: "Градостроительство",
+    title: "Скидки для организаций",
     description:
-      "Формируем сообщества через продуманную интеграцию общественных пространств, зданий и природных элементов.",
-    icon: Trees,
+      "Специальные цены для бюджетных организаций, подрядчиков и оптовых закупок. Работаем по договору с НДС, возможна отсрочка платежа.",
+    icon: BadgePercent,
   },
 ]
 
@@ -57,14 +57,14 @@ export function Expertise() {
     <section id="services" ref={sectionRef} className="py-32 md:py-29">
       <div className="container mx-auto px-6 md:px-12">
         <div className="max-w-3xl mb-20">
-          <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Наши услуги</p>
+          <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Почему выбирают нас</p>
           <h2 className="text-6xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-8xl">
-            <HighlightedText>Экспертиза</HighlightedText>, отточенная
+            <HighlightedText>Надёжность</HighlightedText>, проверенная
             <br />
-            практикой
+            на практике
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Каждый проект опирается на десятилетия совокупного опыта, создавая архитектуру, которая одновременно инновационна и вневременна.
+            Более 500 объектов оснащено нашим оборудованием по всей России. Мы знаем требования нормативов и помогаем реализовывать их с минимальными затратами.
           </p>
         </div>
 
@@ -91,7 +91,7 @@ export function Expertise() {
                     transitionDelay: `${index * 150}ms`,
                   }}
                 >
-                  <Icon className="w-10 h-10 mb-4 text-foreground" strokeWidth={1.25} />
+                  <Icon className="w-10 h-10 mb-4 text-foreground" strokeWidth={1.25} aria-hidden="true" />
                 </div>
                 <h3 className="text-xl font-medium mb-4">{area.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{area.description}</p>
